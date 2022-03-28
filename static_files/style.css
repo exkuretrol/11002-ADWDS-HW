@@ -1,0 +1,214 @@
+:root {
+  --color-1: #05386B;
+  --color-3: #379683;
+  --color-5: #5cdb95;
+  --color-7: #8ee4af;
+  --color-9: #edf5e1;
+}
+
+html {
+  display: block;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  display: block;
+}
+
+body, blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: content-box;
+  border-width: 0px;
+  border-style: solid;
+  word-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: inherit;
+}
+
+/* body */
+body.dark {
+  position: relative;
+  min-height: 100%;
+  font-feature-settings: "kern";
+  background: var(--color-9);
+  color: var(--color-1);
+  padding-bottom: 2rem;
+}
+
+/* navigation bar */
+nav {
+  position: fixed;
+  width: 100%;
+  background: inherit;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+}
+
+nav > ul {
+  display: flex;
+  padding: .5rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-block: 0em;
+  max-width: 768px;
+}
+
+nav > ul > li {
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+}
+
+nav > ul > li:nth-child(4) {
+  margin-left: auto;
+}
+li.me {
+  margin-right: 1rem;
+}
+
+.me > h1 > a::before {
+  margin-right: 1rem;
+  font: var(--fa-font-solid);
+  content: "\f568";
+}
+
+.globe {
+  display: flex;
+}
+
+.globe > a {
+  display: flex;
+}
+
+.globe > a::after {
+  font: var(--fa-font-solid);
+  content: "\f57d";
+}
+
+h1.nav-font {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.nav-font > a {
+  color: var(--color-1);
+}
+
+article#posts {
+  padding-top: 3.5rem;
+  max-width: 768px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+article#posts > div.container {
+  max-width: 70ch;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+article#posts > div.container > article {
+  margin-bottom: 1.5rem;
+  background: var(--color-7);
+  border-radius: .5em;
+  padding-top: .7em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+article#posts > div.container > article > p {
+  /* text-indent: 2em; */
+  text-align: justify;
+  color: var(--color-1);
+  margin-top: .5rem;
+}
+
+article#posts > div.container > article > pre {
+  /* border-radius: .3em; */
+  margin-left: -.5em;
+  margin-right: -.5em;
+}
+
+article#posts > div.container > article > p > code {
+  background: var(--color-3);
+  color: var(--color-9);
+  padding: .25em;
+  border-radius: .2em;
+
+}
+
+h2.post-title, h2.Iluv::after {
+  /* display: flex; */
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--color-9);
+  text-underline-offset: .5rem;
+  margin-right: auto;
+}
+
+h2.Iluv::after {
+  font: var(--fa-font-solid);
+  content: "  \f004";
+}
+
+span.post-time {
+  text-align: end;
+  margin-top: auto;
+  color: var(--color-3);
+  padding-right: .5em;
+}
+
+article#posts > div.container > article > div.wrap {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  margin-bottom: 2.5rem; 
+}
+
+table.bio-table {
+  width: 70%;
+  margin-top: .5rem;
+}
+ul.links > li {
+  font-size: 1.2rem;
+  padding-left: .5rem;
+  margin-top: .2rem;
+}
+
+ul.links > li.github::marker {
+  font: var(--fa-font-brands);
+  content: "\f09b";
+}
+
+ul.links > li.twitter::marker {
+  font: var(--fa-font-brands);
+  content: "\f099";
+}
+
+ul.links > li.discord::marker {
+  font: var(--fa-font-brands);
+  content: "\f392";
+}
+
+a.sp-btn {
+  background-color: var(--color-5);
+  margin-bottom: .5rem;
+}
+a.sp-btn:hover {
+  background-color: var(--color-5);
+  cursor: pointer;
+}
