@@ -8,7 +8,9 @@ printmd = {
    */
   fetchmd: async name => {
     try {
-      const res = await fetch('./posts/' + name + '.md');
+      // 如果是從 github host 改從原始碼抓
+      const res = await fetch('https://raw.githubusercontent.com/exkuretrol/11002-ADWDS-HW/main/posts/' + name + '.md');
+      // const res = await fetch('./posts/' + name + '.md');
       const md = await res.text();
       return md;
     } catch (err) {
